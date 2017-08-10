@@ -309,7 +309,7 @@ But that third objective was still just a twinkle in the team's eye. Since we're
 
 It was a good question, and one where limiting factors, and our relatively small means just made for better DevOps drama.
 
-![alt text](https://confusingmiddle.files.wordpress.com/2016/09/macgyver-opening.gif "We also had paperclips, a rubberband, and some twine.")
+![alt text](http://i.perezhilton.com/wp-content/uploads/2014/07/man-burns-down-house-to-kill-spider.gif "Only one way to handle them.")
 
 ### ARMing Ourselves
 

@@ -87,7 +87,7 @@ This simplifies the startup process and makes it repeatable. Any developer shoul
 
 Finally, run the playbook
 
-```
+```bash
 ansible-playbook \ 
 	-i inventory playbooks/main.yml \
 	-k \
@@ -124,7 +124,7 @@ For starters, all of the configuration is pulled in from `playbooks/main.yml`. T
 #### Inventory
 The inventory is notable in this case because it's been pre-populated with a `swarm_hosts` group which has no nodes
 
-```
+```yaml
 swarm:
   children:
     swarm_master:
@@ -280,7 +280,7 @@ rswarm_mols_hook_key: "{{ secure_rswarm_mols_hook_key }}"
 The final step was to make sure that this container, when run, would mount the UNIX socket where Docker was listening on the swarm master. So with the following, we were able to get a bot up and running that would listen to commands to generate latin squares, and then would fire up a new container anywhere in the swarm to do the processing. Starting the bot was as easy as
 
 
-```
+```bash
 docker run \
         -d \
         --name {{ mols_bot_name }} \
@@ -325,7 +325,7 @@ docker run --rm --privileged multiarch/qemu-user-static:register --reset
 
 to our build scripts. Our ability to build Docker images within Travis really changed the game, and the resultant configurations turned out to be forthright, and refreshingly simple for both the [latin squares solver](https://github.com/champain/mols_container/blob/master/.travis.yml) and the [ruby chatbot](https://github.com/Nykke/mols_slack_bot/blob/master/.travis.yml). They took on the following form.
 
-```
+```yaml
 script:
   - docker run --rm --privileged multiarch/qemu-user-static:register --reset
   - docker build -t champain/latin_squares .
@@ -336,7 +336,7 @@ script:
 
 The other side of this coin was getting these Docker images into a place where the Raspberry Pi could go fetch them. Docker Hub was a prime candidate, but required a login. Travis [supports environment variables](https://docs.travis-ci.com/user/environment-variables/) and by installing the [Travis Rubygem](https://github.com/travis-ci/travis.rb), those environment variables can be encrypted, written to the `travis.yml` in a repo, and used to log into the Docker Hub.
 
-```
+```bash
 $ travis encrypt DOCKER_PASS=facemoney
 Detected repository as champain/mols_container, is this correct? |yes| yes
 Please add the following to your .travis.yml file:

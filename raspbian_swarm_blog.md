@@ -11,7 +11,7 @@ Bearing that in mind, somewhere deep in the bowels of the DevOps dungeon at Exce
 
 More on latin squares:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/VgNN8iokc54" frameborder="0" allowfullscreen></iframe>
+[![The legend, Dave Bock](http://img.youtube.com/vi/VgNN8iokc54/0.jpg)](http://www.youtube.com/watch?v=VgNN8iokc54)
 
 
 Coming into this project my only experience with Docker was that it was a cool way to make my [Molecule](http://molecule.readthedocs.io/en/latest/) builds run faster, and I was vaguely aware that Travis-CI supported it, and it was the new hotness. I was also excited to jump into this new tech after hearing glowing reviews.

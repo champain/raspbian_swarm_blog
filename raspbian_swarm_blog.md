@@ -205,7 +205,7 @@ Then we promptly crashed our Pi. Almost as soon as we ran a computation larger t
 
 ### Bugs!
 
-![alt text](http://i.perezhilton.com/wp-content/uploads/2014/07/man-burns-down-house-to-kill-spider.gif "Only one way to handle them.")
+![alt text](images/bugs.gif "Only one way to handle them.")
 
 One of the first things that we noticed when working with our ARM-based swarm is that we could not actually start up services. They would stay in a `pending` state forever. So we stepped back a little and just started containers with `docker run`, and the containers themselves would run fine. We were even quickly able to overcome architecture-based issues by pointing to containers that had already been built to work with ARM like `alexellis2/visualizer-arm:latest` from the [Docker Hub](https://hub.docker.com/r/alexellis2/visualizer-arm/), but our services would remain in a pending state.
 

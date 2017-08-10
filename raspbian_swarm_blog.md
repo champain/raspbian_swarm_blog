@@ -13,6 +13,7 @@ More on latin squares:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/VgNN8iokc54" frameborder="0" allowfullscreen></iframe>
 
+
 Coming into this project my only experience with Docker was that it was a cool way to make my [Molecule](http://molecule.readthedocs.io/en/latest/) builds run faster, and I was vaguely aware that Travis-CI supported it, and it was the new hotness. I was also excited to jump into this new tech after hearing glowing reviews.
 
 [Docker Swarm](https://docs.docker.com/engine/swarm/) is the native answer to highly available systems that use the power of Docker containerization. Swarm joins several nodes together, administered by one or more managers, and spins up Docker containers to support services, which are Docker containers running with certain redundancy, restart, and load-balancing properties managed by the Swarm. That seemed like it'd be a great candidate to jam into a Pi and watch it work.
